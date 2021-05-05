@@ -4,7 +4,8 @@
   "description": "calc",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "test:coverage": "istanbul cover _mocha"
   },
   "keywords": [
     ""
@@ -13,6 +14,7 @@
   "license": "MIT",
   "devDependencies": {
     "chai": "^3.5.0",
+    "istanbul": "^0.4.5",
     "mocha": "^8.3.2"
   }
 }
