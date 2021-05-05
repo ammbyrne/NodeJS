@@ -1,0 +1,18 @@
+{
+  "name": "calc",
+  "version": "1.0.0",
+  "description": "calc",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    ""
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^8.3.2"
+  }
+}
