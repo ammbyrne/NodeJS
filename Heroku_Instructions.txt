@@ -5,6 +5,13 @@ git push heroku main
 
 
 heroku plugins:install heroku-builds
-heroku builds:cache:purge -c -a ammhello -r ammhello
+heroku plugins:install heroku-repo
+
+heroku apps:delete -a ammhello  --confirm ammhello
+heroku repo:reset -a ammhello
+heroku builds:cache:purge -a ammhello --confirm ammhello
+heroku builds:cache:purge -r ammhello --confirm ammhello
 git commit --allow-empty -m "Purge cache"
 git push heroku main
+
+heroku ps <app>
