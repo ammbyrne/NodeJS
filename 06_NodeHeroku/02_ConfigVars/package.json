@@ -1,8 +1,9 @@
 {
   "name": "configvars",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
-    "node": "16.x"
+    "node": "16.x",
+    "mpm": "7.x"
   },
   "description": "",
   "main": "index.js",
