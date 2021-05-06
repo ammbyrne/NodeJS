@@ -2,3 +2,9 @@ heroku create <your appname>
 git push heroku main
 heroku ps:scale web=1
 git push heroku main
+
+
+heroku plugins:install heroku-builds
+heroku builds:cache:purge -c -a ammhello -r ammhello
+git commit --allow-empty -m "Purge cache"
+git push heroku main
