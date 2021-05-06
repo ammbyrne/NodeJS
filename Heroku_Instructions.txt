@@ -7,11 +7,18 @@ git push heroku main
 heroku plugins:install heroku-builds
 heroku plugins:install heroku-repo
 
-heroku apps:delete -a ammhello  --confirm ammhello
-heroku repo:reset -a ammhello
-heroku builds:cache:purge -a ammhello --confirm ammhello
-heroku builds:cache:purge -r ammhello --confirm ammhello
+heroku apps:delete -a ammhelloworld --confirm ammhelloworld
+heroku repo:reset -a ammhelloworld
+heroku builds:cache:purge -a ammhelloworld --confirm ammhelloworld
+heroku builds:cache:purge -r ammhelloworld --confirm ammhelloworld
 git commit --allow-empty -m "Purge cache"
 git push heroku main
 
+
 heroku ps <app>
+
+
+Heroku local
+git remote add origin ammhelloworld
+git pull -r origin main
+git push -u origin main
