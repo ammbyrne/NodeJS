@@ -1,14 +1,11 @@
 var express = require('express');
 var app = express();
-var bodyParser = require('body-parser');
 
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/dogs');
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
+app.use(express.json({limit: '20mb'}));
+app.use(express.urlencoded({extended:true, limit: '20mb'}));
 
 var dogRoutes = require('./routes/dog.js')(app);
 
